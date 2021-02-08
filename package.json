@@ -1,0 +1,31 @@
+{
+  "name": "bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest":"npm run test -- --headed",
+    "chromeTest":"npm run test -- --browser chrome --key ddda6f94-ff5d-4a02-be55-a79593734a66",
+    "recordDashBoardTest":"npm run test -- --record --key ddda6f94-ff5d-4a02-be55-a79593734a66",
+    "cy:chrome": "cypress run --headed --browser chrome",
+    "pwd":"npx cypress run  -e TAGS='@smoketest'"
+
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  }
+}

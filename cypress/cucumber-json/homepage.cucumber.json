@@ -1,0 +1,177 @@
+[
+  {
+    "description": "    As a valid user\n    I want to log into Application",
+    "keyword": "Feature",
+    "name": "Login to Application",
+    "line": 1,
+    "id": "login-to-application",
+    "tags": [],
+    "uri": "homepage.feature",
+    "elements": [
+      {
+        "id": "login-to-application;valid-login",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Valid Login",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 11
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open login page",
+            "result": {
+              "status": "passed",
+              "duration": 23796000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I fill username with \"Admin\"",
+            "result": {
+              "status": "failed",
+              "duration": 4074000000,
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[id=\"date-picker-inline\"]`, but never found it.\n    at Context.eval (https://s2.demo.opensourcecms.com/__cypress/tests?p=cypress\\integration\\cucumber-tests\\homepage.feature:129:6)\n    at Context.resolveAndRunStepDefinition (https://s2.demo.opensourcecms.com/__cypress/tests?p=cypress\\integration\\cucumber-tests\\homepage.feature:11722:9)\n    at Context.eval (https://s2.demo.opensourcecms.com/__cypress/tests?p=cypress\\integration\\cucumber-tests\\homepage.feature:11063:35)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I fill password with \"admin123\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I click on submit",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see homepage",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-to-application;valid-login-datatable",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Valid Login datatable",
+        "tags": [
+          {
+            "name": "@smoketest",
+            "line": 19
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open login page",
+            "result": {
+              "status": "passed",
+              "duration": 2427000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "user",
+                      "passwordcms",
+                      "ghjg"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "opensourcecms",
+                      "opensourcecms",
+                      "vfgfgf"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 22,
+            "name": "Enter username with",
+            "result": {
+              "status": "passed",
+              "duration": 488000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "user",
+                      "passwordcms"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "opensourcecms",
+                      "opensourcecms"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 25,
+            "name": "Enter password with",
+            "result": {
+              "status": "passed",
+              "duration": 581000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I click on submit",
+            "result": {
+              "status": "passed",
+              "duration": 3823000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I should see homepage",
+            "result": {
+              "status": "passed",
+              "duration": 97000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
